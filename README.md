@@ -1,5 +1,5 @@
 # anonymisedDATA
-[![Views](http://hits.dwyl.io/ASH1998/anonymisedDATA.svg)](http://github.com/ASH1998/anonymisedDATA)
+[![Views](http://hits.dwyl.io/ASH1998/anonymisedDATA.svg)](http://github.com/ASH1998/anonymisedDATA) 
 
 ## Dependencies
 1. Python3
@@ -9,9 +9,9 @@
 5. Catboost, xgboost, lightgbm, sklearn
 6. tqdm
 
-## Repo structure
+## Repo structure [![badge2](https://img.shields.io/badge/repo-download-blue.svg)](https://github.com/ASH1998/anonymisedDATA/archive/master.zip)
 1. **[model.py](https://github.com/ASH1998/anonymisedDATA/blob/master/model.py)** : The python script for the catboost model generates the result csv.
-2. **[finalsub.csv](https://github.com/ASH1998/anonymisedDATA/blob/master/finalsub.csv)** : The submission file.
+2. **[finalsub.csv](https://github.com/ASH1998/anonymisedDATA/blob/master/finalsub.csv)** : The submission file. [![badge1](https://img.shields.io/badge/SubmissionCSV-view%20raw-brightgreen.svg)](https://github.com/ASH1998/anonymisedDATA/raw/master/finalsub.csv) 
 3. [main.ipynb](https://github.com/ASH1998/anonymisedDATA/blob/master/main.ipynb) : notebook for model.py
 4. [download.py](https://github.com/ASH1998/anonymisedDATA/blob/master/download.py) : Download the data
 5. **[zipfilee_FILES/ds_data](https://github.com/ASH1998/anonymisedDATA/tree/master/zipfilee_FILES/ds_data)** : train and test csv files to be stored here.
