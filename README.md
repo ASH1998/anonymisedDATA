@@ -1,6 +1,57 @@
 # anonymisedDATA
 [![Views](http://hits.dwyl.iof/ASH1998/anonymisedDATA.svg)](http://github.com/ASH1998/anonymisedDATA)
 
+## Dependencies
+1. Python3
+2. Sklearn
+3. Matplotlib
+4. Pandas
+5. Catboost, xgboost, lightgbm, sklearn
+6. tqdm
+
+## Repo structure
+1. **[model.py](https://github.com/ASH1998/anonymisedDATA/blob/master/model.py)** : The python script for the catboost model generates the result csv.
+2.
+2. [main.ipynb](https://github.com/ASH1998/anonymisedDATA/blob/master/main.ipynb) : notebook for model.py
+3. [download.py](https://github.com/ASH1998/anonymisedDATA/blob/master/download.py) : Download the data
+4. **[zipfilee_FILES/ds_data](https://github.com/ASH1998/anonymisedDATA/tree/master/zipfilee_FILES/ds_data)** : train and test csv files to be stored here.
+5. [EDA.ipynb](https://github.com/ASH1998/anonymisedDATA/blob/master/EDA.ipynb) : Exploratory Data Analysis of the data.
+6. [oversampling](https://github.com/ASH1998/anonymisedDATA/blob/master/oversampling.ipynb) : Experiments on Oversampling.
+7. [experimental_model_nb dir](https://github.com/ASH1998/anonymisedDATA/tree/master/experimental_models_nb) : Experiments on data
+6. [catboost_info](https://github.com/ASH1998/anonymisedDATA/tree/master/catboost_info) : model storage, model graphs(tensorboard files)
+ 
+
+## Usage
+1. Run on terminal/bash `python3 downloads.py`. It downloads the data. Extract and move the `test.csv` and `train.csv` into `zipfilee_FILES/ds_data`.
+2. Run the `model.py` by `python3 model.py`. It will show the results. Uncomment the last lines to generate the `result.csv` for test data.
+3. Same with rest *.ipynb files*. Using `jupyter notebook --allow-root` 
+
+
+## EDA
+1. Feature importance
+
+![import](https://github.com/ASH1998/anonymisedDATA/blob/master/images/importance.PNG)
+
+2. Box plots to see feature variance
+
+![finalboard](https://github.com/ASH1998/anonymisedDATA/blob/master/images/final.PNG)
+
+3. Distribution of target values
+
+![val](https://github.com/ASH1998/anonymisedDATA/blob/master/images/sactter.PNG)
+
+4. Train-Test-Validation Split
+![split](https://github.com/ASH1998/anonymisedDATA/blob/master/images/tt.PNG)
+
+5. After training :
+ A. `100000 iterations` with learning_rate=0.01
+ 
+ ![100](https://github.com/ASH1998/anonymisedDATA/blob/master/images/100k.PNG)
+ 
+ B. `20000 iterations` with learning_rate=0.3 (best)
+ 
+ ![20](https://github.com/ASH1998/anonymisedDATA/blob/master/images/20k.PNG)
+
 **Briefly describe the conceptual approach you chose! What are the trade-offs?**
   * First starting with [Exploratory Data Analysis](https://github.com/ASH1998/anonymisedDATA/blob/master/EDA.ipynb) : exploring both the test and train files.Getting the most important features out of `55 feature set`, and exploring them thoroughly. Veiwing the number of unique values to get how to deal with the `missing values`.
   * Training with different models and using `ensemble` with various algorithms. [This dir has all the experimental results.](https://github.com/ASH1998/anonymisedDATA/tree/master/experimental_models_nb) Models that I used are `MLPClassifier`, `KNeighborsClassifier`, `SVC`, `GaussianProcessClassifier`,`DecisionTreeClassifier`,  `AdaBoostClassifier`, `ExtraTreesClassifier`.
@@ -26,5 +77,5 @@
   * Write unit testing functions for the data preprocessing part.
 
 
-![finalboard](https://github.com/ASH1998/anonymisedDATA/blob/master/images/final.PNG)
-
+### FINAL OUTPUT on tensorboard.
+![der](https://github.com/ASH1998/anonymisedDATA/blob/master/images/der.PNG)
