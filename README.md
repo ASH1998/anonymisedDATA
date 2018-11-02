@@ -1,5 +1,5 @@
 # anonymisedDATA
-[![Views](http://hits.dwyl.iof/ASH1998/anonymisedDATA.svg)](http://github.com/ASH1998/anonymisedDATA)
+[![Views](http://hits.dwyl.io/ASH1998/anonymisedDATA.svg)](http://github.com/ASH1998/anonymisedDATA) 
 
 ## Dependencies
 1. Python3
@@ -9,16 +9,17 @@
 5. Catboost, xgboost, lightgbm, sklearn
 6. tqdm
 
-## Repo structure
+## Repo structure [![badge2](https://img.shields.io/badge/repo-download-blue.svg)](https://github.com/ASH1998/anonymisedDATA/archive/master.zip)
 1. **[model.py](https://github.com/ASH1998/anonymisedDATA/blob/master/model.py)** : The python script for the catboost model generates the result csv.
-2.
-2. [main.ipynb](https://github.com/ASH1998/anonymisedDATA/blob/master/main.ipynb) : notebook for model.py
-3. [download.py](https://github.com/ASH1998/anonymisedDATA/blob/master/download.py) : Download the data
-4. **[zipfilee_FILES/ds_data](https://github.com/ASH1998/anonymisedDATA/tree/master/zipfilee_FILES/ds_data)** : train and test csv files to be stored here.
-5. [EDA.ipynb](https://github.com/ASH1998/anonymisedDATA/blob/master/EDA.ipynb) : Exploratory Data Analysis of the data.
-6. [oversampling](https://github.com/ASH1998/anonymisedDATA/blob/master/oversampling.ipynb) : Experiments on Oversampling.
-7. [experimental_model_nb dir](https://github.com/ASH1998/anonymisedDATA/tree/master/experimental_models_nb) : Experiments on data
-6. [catboost_info](https://github.com/ASH1998/anonymisedDATA/tree/master/catboost_info) : model storage, model graphs(tensorboard files)
+2. **[finalsub.csv](https://github.com/ASH1998/anonymisedDATA/blob/master/finalsub.csv)** : The submission file. [![badge1](https://img.shields.io/badge/SubmissionCSV-view%20raw-brightgreen.svg)](https://github.com/ASH1998/anonymisedDATA/raw/master/finalsub.csv) 
+3. [main.ipynb](https://github.com/ASH1998/anonymisedDATA/blob/master/main.ipynb) : notebook for model.py
+4. [download.py](https://github.com/ASH1998/anonymisedDATA/blob/master/download.py) : Download the data
+5. **[zipfilee_FILES/ds_data](https://github.com/ASH1998/anonymisedDATA/tree/master/zipfilee_FILES/ds_data)** : train and test csv files to be stored here.
+6. [EDA.ipynb](https://github.com/ASH1998/anonymisedDATA/blob/master/EDA.ipynb) : Exploratory Data Analysis of the data.
+7. [oversampling](https://github.com/ASH1998/anonymisedDATA/blob/master/oversampling.ipynb) : Experiments on Oversampling.
+8. [experimental_model_nb dir](https://github.com/ASH1998/anonymisedDATA/tree/master/experimental_models_nb) : Experiments on data
+9. [catboost_info](https://github.com/ASH1998/anonymisedDATA/tree/master/catboost_info) : model storage, model graphs(tensorboard files)
+ 10. [Images](https://github.com/ASH1998/anonymisedDATA/tree/master/images) Images from eda for readme file.
  
 
 ## Usage
@@ -34,7 +35,7 @@
 
 2. Box plots to see feature variance
 
-![finalboard](https://github.com/ASH1998/anonymisedDATA/blob/master/images/final.PNG)
+![finalboard](https://github.com/ASH1998/anonymisedDATA/blob/master/images/der.PNG)
 
 3. Distribution of target values
 
@@ -52,6 +53,7 @@
  
  ![20](https://github.com/ASH1998/anonymisedDATA/blob/master/images/20k.PNG)
 
+## Questions
 **Briefly describe the conceptual approach you chose! What are the trade-offs?**
   * First starting with [Exploratory Data Analysis](https://github.com/ASH1998/anonymisedDATA/blob/master/EDA.ipynb) : exploring both the test and train files.Getting the most important features out of `55 feature set`, and exploring them thoroughly. Veiwing the number of unique values to get how to deal with the `missing values`.
   * Training with different models and using `ensemble` with various algorithms. [This dir has all the experimental results.](https://github.com/ASH1998/anonymisedDATA/tree/master/experimental_models_nb) Models that I used are `MLPClassifier`, `KNeighborsClassifier`, `SVC`, `GaussianProcessClassifier`,`DecisionTreeClassifier`,  `AdaBoostClassifier`, `ExtraTreesClassifier`.
@@ -78,4 +80,4 @@
 
 
 ### FINAL OUTPUT on tensorboard.
-![der](https://github.com/ASH1998/anonymisedDATA/blob/master/images/der.PNG)
+![der](https://github.com/ASH1998/anonymisedDATA/blob/master/images/final.PNG)
