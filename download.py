@@ -31,6 +31,6 @@ def save_response_content(response, destination):
 
 if __name__ == "__main__":
     file_id = '1anhOEdvXl50zPzh4VPD9FXHKqp9MRUrW'
-    destination = 'zipfilee'
+    destination = 'zipfilee.zip'
     download_file_from_google_drive(file_id, destination)
 
