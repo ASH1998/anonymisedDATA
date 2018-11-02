@@ -120,6 +120,10 @@ print("COHEN KAPPA : ", cohen_kappa_score(y_test, y_pred))
 '''
 y_proba = cat_model.predict_proba(test)
 result = pd.DataFrame(data=y_proba, index=test.index)
+df.drop("0", axis=1, inplace=True)
+df['id'] = df["Unnamed: 0"]
+df["target"] = df["1"]
+df.drop(["Unnamed: 0", "1"], axis=1, inplace=True)
 result.to_csv("finalsub.csv")
 '''
 
